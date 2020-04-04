@@ -34,5 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementsByClassName("header-menu__switcher")[0].addEventListener("click", function () {
         document.getElementsByClassName("header-menu")[0].classList.toggle("header-menu_active")
+    });
+
+    const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const lazyDiv = entry.target;
+                lazyDiv.style.background = `url('${lazyDiv.dataset.backgroundSrc}')`;
+                lazyDiv.style.backgroundSize = '100%';
+                imageObserver.unobserve(lazyDiv);
+            }
+        })
+    });
+    const arr = document.querySelectorAll('.lazy-background')
+    arr.forEach((v) => {
+        imageObserver.observe(v);
     })
+
 }, !1);
