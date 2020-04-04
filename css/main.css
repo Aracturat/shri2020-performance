@@ -308,7 +308,7 @@ footer {
 
 
 .card {
-    background: url("../img/cbg.jpg");
+    background: #ebebeb;
     color: #333;
     box-sizing: border-box;
     padding: 0 20px 20px 20px;
