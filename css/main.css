@@ -13,7 +13,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
     font-family: OpenSansReg;
-    src: local('Open Sans'), local('OpenSans'), url('../assets/OpenSans-Regular-subset.woff2') format('woff2');
+    src: local('Open Sans'), local('OpenSans'), url('data:../assets/OpenSans-Regular-subset.woff2') format('woff2');
     font-display: swap;
 }
 
@@ -717,7 +717,7 @@ html {
 }
 
 .description_critical {
-    background: url('../img/cbg.jpg');
+    background: #ebebeb;
     color: #000;
     border-radius: 20px;
     margin-top: -20px;
